@@ -1,0 +1,908 @@
+@import "../../../styles";
+
+
+
+/*-------------------------
+    Course Grid Column  
+---------------------------*/
+
+.rbt-course-grid-column {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-top: -30px;
+    .course-grid-3,
+    .course-grid-2,
+    .course-grid-4 {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-top: 30px;
+        .rbt-card {
+            transition: 0.4s;
+        }
+    }
+    .course-grid-4 {
+        flex: 0 0 auto;
+        width: 25%;
+        @media #{$lg-layout} {
+            width: 33.33%;
+        }
+        @media #{$md-layout} {
+            width: 50%; 
+        }
+        @media #{$sm-layout} {
+            width: 100%; 
+        }
+    }
+    .course-grid-3 {
+        flex: 0 0 auto;
+        width: 33.33%;
+        @media #{$md-layout} {
+            width: 50%; 
+        }
+        @media #{$sm-layout} {
+            width: 100%; 
+        }
+    }
+    .course-grid-2 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+    &.active-list-view {
+        .course-grid-3,
+        .course-grid-2 {
+            width: 100%;
+        }
+    }
+    &.list-column-half {
+        &.active-list-view {
+            .course-grid-3,
+            .course-grid-2,
+            .course-grid-4 {
+                width: 50%;
+                @media #{$sm-layout} {
+                    width: 100%; 
+                }
+            }
+        }
+    }
+    .rbt-card {
+        .rbt-card-img {
+            transition: none;
+            a {
+                transition: none;
+                img {
+                    transition: none;
+                }
+            }
+        }
+    }
+}
+
+/*----------------------------- 
+    Edu Course Style 
+-------------------------------*/
+
+.rbt-card {
+    overflow: hidden;
+    box-shadow: var(--shadow-1);
+    padding: 30px;
+    border-radius: var(--radius);
+    background: var(--color-white);
+    position: relative;
+    height: 100%;
+    @media #{$lg-layout} {
+        padding: 20px;
+    }
+    @media #{$md-layout} {
+        padding: 20px;
+    }
+    @media #{$sm-layout} {
+        padding: 15px;
+    }
+    .rbt-card-img {
+        position: relative;
+        a {
+            display: block;
+            img {
+                width: 100%;
+                transition: 0.5s;
+                object-fit: cover;
+                border-radius: var(--radius);
+            }
+        }
+    }
+
+    .rbt-card-body {
+        padding-top: 30px;
+        @media #{$lg-layout} {
+            padding-top: 20px;
+        }
+        @media #{$md-layout} {
+            padding-top: 20px;
+        }
+        @media #{$sm-layout} {
+            padding-top: 20px;
+        }
+        .rbt-meta {
+            margin-bottom: 14px;
+            @media #{$sm-layout} {
+                margin-bottom: 8px;
+            }
+        }
+
+        .rbt-category {
+            margin-bottom: 15px;
+        }
+
+        .lesson-number {
+            margin-bottom: 15px;
+            @media #{$md-layout} {
+                margin-bottom: 8px;
+            }
+            @media #{$sm-layout} {
+                margin-bottom: 8px;
+            }
+        }
+
+        .rbt-card-title {
+            margin-bottom: 10px;
+            a {
+                color: var(--color-heading);
+                @extend %transition;
+                &:hover {
+                    color: var(--color-primary);
+                }
+            }
+        }
+
+        .rbt-card-title {
+            font-size: 26px;
+            @media #{$lg-layout} {
+                font-size: 22px;
+            }
+            @media #{$md-layout} {
+                font-size: 22px;
+            }
+            @media #{$sm-layout} {
+                font-size: 20px;
+            }
+            @media #{$large-mobile} {
+                font-size: 18px;
+            }
+        }
+
+        .rbt-card-text {
+            color: var(--color-body);
+            margin-bottom: 20px;
+            @media #{$smlg-device} {
+                margin-bottom: 14px;
+            }
+            @media #{$sm-layout} {
+                margin-bottom: 10px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+        .rbt-author-meta {
+            @media #{$smlg-device} {
+                margin-bottom: 10px !important;
+            }
+        }
+        .rbt-review {
+            margin-bottom: 12px;
+        }
+        .rbt-card-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            .rbt-btn-link {
+                font-size: 14px;
+            }
+        }
+    }
+    
+    .rbt-card-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 4px;
+        margin-top: -10px;
+
+        @media #{$sm-layout} {
+            margin-bottom: 10px;
+            margin-top: 0;
+        }
+        .rbt-review {
+            margin-bottom: 0;
+        }
+    }
+
+    &.variation-02 {
+        position: relative;
+        padding: 0;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-1);
+        .rbt-card-body {
+            padding: 30px;
+            @media #{$lg-layout} {
+                padding: 20px;
+            }
+            @media #{$md-layout} {
+                padding: 20px;
+            }
+            @media #{$sm-layout} {
+                padding: 20px;
+            }
+        }
+        .rbt-card-img {
+            a {
+                img {
+                    max-height: 350px;
+                    border-radius: 6px 6px 0 0;
+                }
+            }
+        }
+    }
+
+    &.height-auto {
+        .rbt-card-img {
+            a {
+                img {
+                    max-height: inherit !important;
+                }
+            }
+        }
+    }
+
+    &.card-minimal {
+        box-shadow: var(--shadow-9);
+        .rbt-card-body {
+            padding: 50px 40px; 
+            @media #{$lg-layout} {
+                padding: 40px 30px;
+            }
+            @media #{$md-layout} {
+                padding: 40px 30px;
+            }
+            @media #{$sm-layout} {
+                padding: 20px;
+            }
+        }
+    }
+
+    &.variation-03 {
+        height: 100%;
+        .rbt-card-img {
+            .thumbnail-link {
+                position: relative;
+                display: block;
+                &::before {
+                    position: absolute;
+                    content: "";
+                    background: rgba(111,120,148,.54);
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    transition: var(--transition-2);
+                    opacity: 0;
+                    border-radius: var(--radius);
+                }
+                .rbt-btn {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    margin-top: 50px;
+                    transition: 0.4s;
+                    opacity: 0;
+                    width: max-content;
+                }
+            }
+        }
+        .rbt-card-body {
+            display: flex;
+            @media #{$sm-layout} {
+                padding-top: 15px;
+            }
+            .rbt-card-title {
+                flex-basis: 80%;
+                margin: 0;
+                text-transform: capitalize;
+                @media #{$laptop-device} {
+                    font-size: 22px;
+                }
+                @media #{$lg-layout} {
+                    flex-basis: 90%;
+                    font-size: 20px;
+                }
+                @media #{$md-layout} {
+                    flex-basis: 90%;
+                    font-size: 20px;
+                }
+                @media #{$sm-layout} {
+                    flex-basis: 90%;
+                    font-size: 20px;
+                }
+            }
+            .rbt-card-bottom {
+                flex-basis: 20%;
+                display: flex;
+                justify-content: flex-end;
+                @media #{$lg-layout} {
+                    flex-basis: 10%;
+                }
+                @media #{$md-layout} {
+                    flex-basis: 10%;
+                }
+                @media #{$sm-layout} {
+                    flex-basis: 10%;
+                }
+            }
+        }
+        .card-information {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            img {
+                border-radius: 50%;
+                width: 24px;
+                height: 24px;
+                border: 2px solid var(--color-border);
+                object-fit: cover;
+            }
+            .card-count {
+                padding-left: 10px;
+            }
+        }
+        &.program-image-large {
+            .card-information {
+                img {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+        &:hover {
+            .rbt-card-img {
+                .thumbnail-link {
+                    &::before {
+                        opacity: 1;
+                    }
+                    .rbt-btn {
+                        margin-top: 0;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    &.height-330 {
+        .rbt-card-img {
+            a {
+                img {
+                    max-height: 330px;
+                }
+            }
+        }
+    }
+
+    &.card-list {
+        display: flex;
+        max-height: 150px;
+        border-radius: 2px;
+        align-items: center;
+        height: 100%;
+        @media #{$sm-layout} {
+            display: block;
+            max-height: inherit;
+            align-items: center;
+            height: auto;
+            border-radius: var(--radius);
+        }
+
+        .rbt-card-img {
+            height: 100%;
+            a {
+                height: 100%;
+                img {
+                    border-radius: 2px 0 0 2px;
+                    max-height: initial;
+                    max-width: 290px;
+                    min-width: 290px;
+                    object-fit: cover;
+                    height: 100%;
+                    @media #{$lg-layout} {
+                        max-width: 200px;
+                        min-width: 200px;
+                    }
+                    @media #{$sm-layout} {
+                        max-height: initial;
+                        max-width: inherit;
+                        min-width: inherit;
+                        width: 100%;
+                        object-fit: cover;
+                        border-radius: var(--radius) var(--radius) 0 0;
+                    }
+                }
+            }
+        }
+        .rbt-card-body {
+            padding: 30px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            @media #{$large-mobile} {
+                padding: 20px;
+            }
+        }
+    }
+
+    &.card-list-2 {
+        display: flex;
+        border-radius: var(--radius);
+        align-items: center;
+        height: 100%;
+
+        @media #{$md-layout} {
+            display: block;
+        }
+
+        @media #{$sm-layout} {
+            display: block;
+        }
+
+        .rbt-card-img {
+            flex-basis: 40%;
+            height: 100%;
+            @media #{$md-layout} {
+                height: auto;
+            }
+            @media #{$sm-layout} {
+                height: auto;
+            }
+            a {
+                display: block;
+                height: 100%;
+                width: 100%;
+                img {
+                    border-radius: var(--radius);
+                    max-height: 100%;
+                    max-width: 100%;
+                    
+                }
+            }
+        }
+
+        .rbt-card-body {
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-basis: 60%;
+            padding-left: 30px;
+            @media #{$lg-layout} {
+                padding-left: 20px;
+            }
+            @media #{$md-layout} {
+                padding-left: 0;
+                padding-top: 30px;
+            }
+            @media #{$sm-layout} {
+                padding-left: 0;
+                padding-top: 30px;
+            }
+            .rbt-card-title {
+                font-size: 26px;
+                @media #{$lg-layout} {
+                    font-size: 22px;
+                }
+                @media #{$md-layout} {
+                    font-size: 22px;
+                }
+                @media #{$sm-layout} {
+                    font-size: 22px;
+                }
+                @media #{$large-mobile} {
+                    font-size: 20px;
+                }
+            }
+            
+        }
+
+        &.elegant-course {
+            @media #{$lg-layout} {
+                display: block;
+            }
+            .rbt-card-img {
+                flex-basis: 55%;
+                display: block;
+                a {
+                    display: block;
+                    height: 100%;
+                    img {
+                        max-width: 100%;
+                        height: 100%;
+                        max-height: 100%;
+                        min-height: 100%;
+                        border-radius: 6px 0 0 6px;
+                    }
+                }
+            }
+            .rbt-card-body {
+                flex-basis: 45%;
+                position: relative;
+            }
+        }
+
+
+        &.event-list-card {
+            .rbt-card-img {
+                height: 100%;
+                @media #{$md-layout} {
+                    height: auto;
+                }
+                @media #{$sm-layout} {
+                    height: auto;
+                }
+                a {
+                    height: 100%;
+                    img {
+                        border-radius: 6px;
+                        width: 100%;
+                        height: 100%;
+                        @media #{$md-layout} {
+                            max-width: 100%;
+                            height: auto;
+                        }
+                        @media #{$sm-layout} {
+                            max-width: 100%;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+            .rbt-card-body {
+                padding-left: 25px;
+                @media #{$md-layout} {
+                    padding-left: 0;
+                }
+                @media #{$sm-layout} {
+                    padding-left: 0;
+                    padding-top: 20px;
+                }
+                .rbt-card-title {
+                    font-size: 22px;
+                    margin-bottom: 20px;
+                    @media #{$sm-layout} {
+                        font-size: 18px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    &.elegant-course {
+        padding: 0;
+        border-radius: 10px;
+        align-items: inherit;
+        .rbt-meta {
+            margin: -3px;
+            margin-bottom: -6px;
+            li {
+                margin: 3px;
+                margin-bottom: 6px;
+            }
+        }
+        .rbt-meta-badge {
+            margin: -3px;
+            margin-bottom: -6px;
+            li {
+                margin: 3px;
+                margin-bottom: 6px;
+                .rbt-badge {
+                    transition: 0.3s;
+                    &:hover {
+                        background: var(--primary-opacity);
+                        color: var(--color-primary);
+                    }
+                }
+            }
+        }
+
+        .rbt-card-img {
+            a {
+                img {
+                    border-radius: var(--radius) var(--radius) 0 0;
+                }
+            }
+        }
+        .rbt-card-body {
+            padding: 30px;
+            .rbt-card-bottom {
+                .rbt-btn-link {
+                    margin-left: 20px;
+                }
+            }
+
+            
+        }
+
+        &.card-list-2 {
+            .rbt-card-body {
+                padding: 45px 30px 35px;
+                @media #{$sm-layout} {
+                    padding: 45px 20px 35px;
+                }
+            }
+        }
+    }
+    &.event-grid-card {
+        .rbt-meta {
+            margin: -3px;
+            margin-bottom: 10px;
+            li {
+                margin: 3px;
+            }
+        }
+        .rbt-card-body  {
+            padding-top: 15px;
+            .rbt-card-title {
+                margin-bottom: 22px;
+                @media #{$lg-layout} {
+                    font-size: 24px;
+                }
+            }
+        }
+        .rbt-badge {
+            span {
+                font-size: 12px;
+                color: var(--color-body);
+                display: block;
+                font-weight: 700;
+                letter-spacing: -0.5px;
+            }
+        }
+    }
+
+
+    
+
+
+
+}
+
+/*------------------------------
+    Rbt Hover Style
+-------------------------------*/
+
+.rbt-hover {
+    transition: var(--transition-2);
+    &:hover {
+        transform: scale(1.02);
+    }
+}
+
+.rbt-badge-3 {
+    position: absolute;
+    bottom: 23px;
+    right: 20px;
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background: transparent !important; 
+    span {
+        font-size: var(--font-size-b4);
+        line-height: 1.2;
+        color: #ffffff;
+        display: block;
+        font-weight: var(--f-bold);
+        font-family: var(--font-secondary);
+    }
+}
+
+
+
+.rbt-hover-02 {
+    transition: var(--transition-2);
+    &:hover {
+        transform: translateY(-10px);
+    }
+}
+
+.rbt-hover-03 {
+    transition: transform .65s cubic-bezier(.23,1,.32,1);
+    &:hover {
+        transform: translateY(-3px);
+    }
+}
+
+.rbt-link-hover {
+    a {
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: currentColor;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s;
+        }
+        &:hover {
+            &::after {
+                transform-origin: bottom left;
+                transform: scaleX(1);
+            }
+        }
+    }
+}
+
+.course-grid-3 {
+    flex: 0 0 auto;
+    width: 33.33%;
+    @media #{$md-layout} {
+        width: 50%; 
+    }
+    @media #{$sm-layout} {
+        width: 100%; 
+    }
+}
+
+.rbt-card {
+    overflow: hidden;
+    box-shadow: var(--shadow-1);
+    padding: 30px;
+    border-radius: var(--radius);
+    background: var(--color-white);
+    position: relative;
+    height: 100%;
+    @media #{$lg-layout} {
+        padding: 20px;
+    }
+    @media #{$md-layout} {
+        padding: 20px;
+    }
+    @media #{$sm-layout} {
+        padding: 15px;
+    }
+    .rbt-card-img {
+        position: relative;
+        a {
+            display: block;
+            img {
+                width: 100%;
+                transition: 0.5s;
+                object-fit: cover;
+                border-radius: var(--radius);
+            }
+        }
+    }
+}
+.rbt-badge-3 {
+    position: absolute;
+    bottom: 23px;
+    right: 20px;
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background: transparent !important; 
+    span {
+        font-size: var(--font-size-b4);
+        line-height: 1.2;
+        color: #ffffff;
+        display: block;
+        font-weight: var(--f-bold);
+        font-family: var(--font-secondary);
+    }
+}
+.rbt-card-body {
+    padding-top: 30px;
+    @media #{$lg-layout} {
+        padding-top: 20px;
+    }
+    @media #{$md-layout} {
+        padding-top: 20px;
+    }
+    @media #{$sm-layout} {
+        padding-top: 20px;
+    }
+    .rbt-meta {
+        margin-bottom: 14px;
+        @media #{$sm-layout} {
+            margin-bottom: 8px;
+        }
+    }
+
+    .rbt-category {
+        margin-bottom: 15px;
+    }
+
+    .lesson-number {
+        margin-bottom: 15px;
+        @media #{$md-layout} {
+            margin-bottom: 8px;
+        }
+        @media #{$sm-layout} {
+            margin-bottom: 8px;
+        }
+    }
+
+    .rbt-card-title {
+        margin-bottom: 10px;
+        a {
+            color: var(--color-heading);
+            @extend %transition;
+            &:hover {
+                color: var(--color-primary);
+            }
+        }
+    }
+
+    .rbt-card-title {
+        font-size: 26px;
+        @media #{$lg-layout} {
+            font-size: 22px;
+        }
+        @media #{$md-layout} {
+            font-size: 22px;
+        }
+        @media #{$sm-layout} {
+            font-size: 20px;
+        }
+        @media #{$large-mobile} {
+            font-size: 18px;
+        }
+    }
+
+    .rbt-card-text {
+        color: var(--color-body);
+        margin-bottom: 20px;
+        @media #{$smlg-device} {
+            margin-bottom: 14px;
+        }
+        @media #{$sm-layout} {
+            margin-bottom: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    .rbt-author-meta {
+        @media #{$smlg-device} {
+            margin-bottom: 10px !important;
+        }
+    }
+    .rbt-review {
+        margin-bottom: 12px;
+    }
+    .rbt-card-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        .rbt-btn-link {
+            font-size: 14px;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="row">
+        
+        <div class="col-lg-8">
+            <router-outlet></router-outlet>
+            <div class="rbt-course-grid-column">
+            <div *ngFor="let item of bootcamp" class="course-grid-3">
+                <div class="rbt-card variation-01 rbt-hover">
+                    <div class="rbt-card-img">
+                        <a href="#">
+                            <img src="{{item.imagePath}}" alt="Card image">
+                        </a>
+                    </div>
+                    <div class="rbt-card-body">
+                        <div class="rbt-card-top">
+                                
+                            <div class="rbt-bookmark-btn">
+                                <a class="rbt-round-btn" title="Bookmark" href="#"><i class="feather-bookmark"></i></a>
+                            </div>
+                        </div>
+        
+                        <h4 class="rbt-card-title"><a href="#">{{item.name}}</a>
+                        </h4>
+        
+                        <ul class="rbt-meta">
+                            <li><i class="feather-book"></i>12 Lessons</li>
+                            <li><i class="feather-users"></i>50 Students</li>
+                        </ul>
+        
+                        <p class="rbt-card-text">It is a long established fact that a reader will be
+                            distracted.</p>
+                        <div class="rbt-author-meta mb--10">
+                            <div class="rbt-avater">
+                                <a href="#">
+                                    <img src="assets/images/client/avatar-02.png" alt="Sophia Jaymes">
+                                </a>
+                            </div>
+                            <div class="rbt-author-info">
+                                By <a href="profile.html">Angela</a> In <a href="#">Development</a>
+                            </div>
+                        </div>
+                        <div class="rbt-card-bottom">
+                            <div class="rbt-price">
+                                <span class="current-price">$60</span>
+                                <span class="off-price">$120</span>
+                            </div>
+                            <a class="rbt-btn-link" href="course-details.html">Learn
+                                More<i class="feather-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+    </div>
+    
+    </div>
+
+    
+    

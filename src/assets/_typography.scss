@@ -1,0 +1,455 @@
+/**
+ * Typography
+ */
+
+ @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap');
+
+ /*
+     font-family: 'Source Serif Pro', serif; 
+ */
+ 
+ * {
+     box-sizing: border-box;
+ }
+ 
+ html {
+     margin: 0;
+     padding: 0;
+     font-size: 10px;
+ }
+ 
+ body {
+     font-size: 18px;
+     line-height: 1.5;
+     font-family: var(--font-primary);
+     color: var(--color-body);
+     font-weight: 400;
+     scroll-behavior: auto;
+     position: relative;
+     overflow-y: scroll;
+     scrollbar-width: thin;
+     @media #{$sm-layout} {
+         font-size: 16px;
+         line-height: 1.5;
+     }
+ }
+ 
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6,
+ .h1,
+ .h2,
+ .h3,
+ .h4,
+ .h5,
+ .h6,
+ address,
+ p,
+ pre,
+ blockquote,
+ menu,
+ ol,
+ ul,
+ table,
+ hr {
+     margin: 0;
+     margin-bottom: 20px;
+ }
+ 
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6,
+ .h1,
+ .h2,
+ .h3,
+ .h4,
+ .h5,
+ .h6 {
+     word-break: break-word;
+     font-family: var(--font-secondary);
+     line-height: 1.4074;
+     color: var(--color-heading);
+ }
+ 
+ h1,
+ .h1 {
+     font-size: var(--h1);
+     line-height: 1.19;
+ }
+ 
+ h2,
+ .h2 {
+     font-size: var(--h2);
+     line-height: 1.23;
+ }
+ 
+ h3,
+ .h3 {
+     font-size: var(--h3);
+     line-height: 1.14;
+ }
+ 
+ h4,
+ .h4 {
+     font-size: var(--h4);
+     line-height: 1.25;
+ }
+ 
+ h5,
+ .h5 {
+     font-size: var(--h5);
+     line-height: 1.24;
+ }
+ 
+ h6,
+ .h6 {
+     font-size: var(--h6);
+     line-height: 1.25;
+ }
+ 
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6,
+ .h1,
+ .h2,
+ .h3,
+ .h4,
+ .h5,
+ .h6 {
+     a {
+         color: inherit;
+     }
+ }
+ 
+ @media #{$md-layout} {
+     h1,
+     .h1 {
+         font-size: 38px;
+     }
+     h2,
+     .h2 {
+         font-size: 32px;
+     }
+ 
+     h3,
+     .h3 {
+         font-size: 28px;
+     }
+ 
+     h4,
+     .h4 {
+         font-size: 24px;
+     }
+     h5,
+     .h5 {
+         font-size: 18px;
+     }
+ }
+ 
+ @media #{$sm-layout} {
+     h1,
+     .h1 {
+         font-size: 34px;
+     }
+     h2,
+     .h2 {
+         font-size: 28px;
+     }
+ 
+     h3,
+     .h3 {
+         font-size: 24px;
+     }
+ 
+     h4,
+     .h4 {
+         font-size: 20px;
+     }
+     h5,
+     .h5 {
+         font-size: 18px;
+     }
+     
+ }
+ 
+ h1,
+ .h1,
+ h2,
+ .h2,
+ h3,
+ .h3 {
+     font-weight: var(--f-bold);
+ }
+ 
+ h4,
+ .h4,
+ h5,
+ .h5 {
+     font-weight: var(--f-bold);
+ }
+ 
+ h6,
+ .h6 {
+     font-weight: var(--f-medium);
+ }
+ 
+ p {
+     font-size: 18px;
+     line-height: 1.45;
+     margin-bottom: 30px;
+     @media #{$lg-layout} {
+         font-size: 16px;
+     }
+ 
+     @media #{$md-layout} {
+         font-size: 16px;
+     }
+ 
+     @media #{$sm-layout} {
+         font-size: 16px;
+         line-height: 28px;
+     }
+ 
+     &.has-large-font-size {
+         line-height: 1.5;
+         font-size: 36px;
+         @media #{$sm-layout} {
+             font-size: 16px;
+             line-height: 28px;
+         }
+     }
+ 
+     &.has-medium-font-size {
+         font-size: 20px;
+         line-height: 36px;
+         @media #{$md-layout} {
+             font-size: 18px;
+             line-height: 30px;
+         }
+         @media #{$sm-layout} {
+             font-size: 16px;
+             line-height: 28px;
+         }
+     }
+     
+     &.has-small-font-size {
+         font-size: 13px;
+     }
+     &.has-very-light-gray-color {
+         color: var(--color-white);
+     }
+     &.has-background {
+         padding: 20px 30px;
+     }
+     &.b1 {
+         font-size: var(--font-size-b1);
+         line-height: var(--line-height-b1);
+         @media #{$lg-layout} {
+             font-size: 18px;
+         }
+         @media #{$sm-layout} {
+             font-size: 16px;
+             line-height: 28px;
+         }
+     }
+     &.b2 {
+         font-size: var(--font-size-b2);
+         line-height: var(--line-height-b2);
+         @media #{$sm-layout} {
+             font-size: 16px;
+             line-height: 28px;
+         }
+     }
+     &.b3 {
+         font-size: var(--font-size-b3);
+         line-height: var(--line-height-b3);
+         @media #{$sm-layout} {
+             font-size: 16px;
+             line-height: 28px;
+         }
+     }
+     &.b4 {
+         font-size: var(--font-size-b4);
+         line-height: var(--line-height-b4);
+         @media #{$sm-layout} {
+             font-size: 16px;
+             line-height: 28px;
+         }
+     }
+     &:last-child {
+         margin-bottom: 0;
+     }
+ }
+ 
+ .b1 {
+     font-size: var(--font-size-b1);
+     line-height: var(--line-height-b1);
+     @media #{$sm-layout} {
+         font-size: 16px;
+         line-height: 28px;
+     }
+ }
+ 
+ .b2 {
+     font-size: var(--font-size-b2);
+     line-height: var(--line-height-b2);
+     @media #{$sm-layout} {
+         font-size: 16px;
+         line-height: 28px;
+     }
+ }
+ 
+ .b3 {
+     font-size: var(--font-size-b3);
+     line-height: var(--line-height-b3);
+     @media #{$sm-layout} {
+         font-size: 16px;
+         line-height: 28px;
+     }
+ }
+ 
+ .b4 {
+     font-size: var(--font-size-b4);
+     line-height: var(--line-height-b4);
+     @media #{$sm-layout} {
+         font-size: 16px;
+         line-height: 28px;
+     }
+ }
+ 
+ table {
+     border-collapse: collapse;
+     border-spacing: 0;
+     margin: 0 0 20px;
+     width: 100%;
+ }
+ 
+ table a,
+ table a:link,
+ table a:visited {
+     text-decoration: none;
+ }
+ 
+ cite,
+ .wp-block-pullquote cite,
+ .wp-block-pullquote.is-style-solid-color blockquote cite,
+ .wp-block-quote cite {
+     color: var(--heading-color);
+ }
+ 
+ var {
+     font-family: "Courier 10 Pitch", Courier, monospace;
+ }
+ 
+ /*---------------------------
+     List Style 
+ ---------------------------*/
+ ul,
+ ol {
+     padding-left: 18px;
+ }
+ 
+ ul {
+     list-style: disc;
+     margin-bottom: 30px;
+     padding-left: 20px;
+     &.liststyle {
+         &.bullet {
+             li {
+                 font-size: 18px;
+                 line-height: 30px;
+                 color: var(--color-body);
+                 position: relative;
+                 padding-left: 30px;
+ 
+                 @media #{$sm-layout} {
+                     padding-left: 19px;
+                 }
+ 
+                 &::before {
+                     position: absolute;
+                     content: "";
+                     width: 6px;
+                     height: 6px;
+                     border-radius: 100%;
+                     background: var(--color-body);
+                     left: 0;
+                     top: 10px;
+                 }
+ 
+                 &+li {
+                     margin-top: 8px;
+                 }
+             }
+         }
+     }
+     li {
+         margin-top: 10px;
+         margin-bottom: 10px;
+         color: var(--color-body);
+         a {
+             text-decoration: none;
+             color: var(--color-heading);
+             @extend %transition;
+ 
+             &:hover {
+                 color: var(--color-primary);
+             }
+         }
+     }
+     ul {
+         margin-bottom: 0;
+     }
+ }
+ 
+ ol {
+     margin-bottom: 30px;
+     li {
+         color: var(--color-body);
+         margin-top: 10px;
+         margin-bottom: 10px;
+         a {
+             color: var(--heading-color);
+             @extend %transition;
+             text-decoration: none;
+ 
+             &:hover {
+                 color: var(--color-primary);
+             }
+         }
+     }
+     ul {
+         padding-left: 30px;
+     }
+ }
+ 
+ .nav-pills {
+     margin-bottom: 30px;
+     li{
+         margin: 0;
+         button{
+             font-size: 16px;
+             line-height: 15px;
+             font-weight: 500;
+             color: var(--color-heading);
+             padding: 15px 30px;
+             transition: 0.3s;
+             &:hover{
+                 color: var(--color-heading);
+             }
+         }
+     }
+ }
+ 
+ .entry-content a {
+     text-decoration: underline;
+ }

@@ -1,0 +1,457 @@
+/*=====================
+    All Extend Here
+=======================*/
+/* -----------------------------
+    Hover Dropdown Extend  
+--------------------------------*/
+
+%rbt-dropdown-type-1 {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    visibility: hidden;
+    clip: rect(0px, 200vw, 0, 0px);
+    opacity: 0;
+    transition: opacity 0.4s linear, clip 0.6s linear, visibility 0s 0.4s;
+    transform: translateZ(0);
+}
+
+%rbt-hover-dropdown-type-1 {
+    top: 100%;
+    visibility: visible;
+    opacity: 1;
+    clip: rect(0px, 100vw, 200vh, -30px);
+    transition: clip 0.6s linear, opacity 0.4s linear;
+}
+
+
+/*-----------------------------
+    Rbt Background Gradient
+-------------------------------*/
+
+%bg-gradient-9 {
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(270deg, var(--color-secondary) 0%, var(--color-primary) 100%) !important;
+    &::after {
+        background: linear-gradient(rgba(255, 255, 255,1) 0%, rgba(255, 255, 255,0.1) 100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+        z-index: -1;
+    }
+}
+
+/*----------------------
+    Bg Image  
+------------------------*/
+
+%bgImagePosition {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+%liststyle {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+%transition {
+    transition: var(--transition);
+}
+
+%transition-4 {
+    transition: var(--transition-4);
+}
+
+
+/*----------------------
+    Text Color  
+------------------------*/
+.color-body {
+    color: var(--color-body) !important;
+}
+.color-primary {
+    color: var(--color-primary) !important;
+}
+
+.color-secondary {
+    color: var(--color-secondary) !important;
+}
+
+.color-coral {
+    color: var(--color-coral) !important;
+}
+
+.color-violet {
+    color: var(--color-violet) !important;
+}
+
+.color-pink {
+    color: var(--color-pink) !important;
+}
+
+.color-white {
+    color: var(--color-white) !important;
+}
+
+.color-white-off {
+    color: var(--color-white-off) !important;
+}
+.color-white-off {
+    color: var(--color-white-off) !important;
+}
+
+.heading-opacity {
+    color: var(--heading-opacity) !important;
+}
+
+.color-danger {
+    color: var(--color-danger) !important;
+}
+
+.color-warning {
+    color: var(--color-warning) !important;
+}
+.color-success {
+    color: var(--color-success) !important;
+}
+
+
+
+/*----------------------
+    Background Color  
+------------------------*/
+
+.bg-color-primary {
+    background-color: var(--color-primary) !important;
+}
+
+.bg-color-secondary {
+    background-color: var(--color-secondary) !important;
+}
+
+.bg-color-coral {
+    background-color: var(--color-coral) !important;
+}
+
+.bg-color-violet {
+    background-color: var(--color-violet) !important;
+}
+
+.bg-color-pink {
+    background-color: var(--color-pink) !important;
+}
+
+.bg-color-heading {
+    background-color: var(--color-heading) !important;
+}
+.bg-color-white {
+    background-color: var(--color-white) !important;
+}
+
+.bg-color-body {
+    background-color: var(--color-body) !important;
+}
+
+.bg-color-white {
+    background-color: var(--color-white) !important;
+}
+
+.bg-color-white-off {
+    background-color: var(--color-white-off) !important;
+}
+
+.bg-color-bodyest {
+    background-color: var(--color-bodyest) !important;
+}
+.bg-color-dark {
+    background-color: var(--color-dark) !important;
+}
+.bg-color-darker {
+    background-color: var(--color-darker) !important;
+}
+.bg-color-black {
+    background-color: var(--color-black) !important;
+}
+.bg-color-grey {
+    background-color: var(--color-grey) !important;
+}
+.bg-color-grey2 {
+    background-color: var(--color-grey2) !important;
+}
+.bg-color-gray {
+    background-color: var(--color-gray) !important;
+}
+.bg-color-gray-light {
+    background-color: var(--color-gray-light) !important;
+}
+.bg-color-gray-lighter {
+    background-color: var(--color-gray-lighter) !important;
+}
+.bg-color-light {
+    background-color: var(--color-light) !important;
+}
+.bg-color-lighter {
+    background-color: var(--color-lighter) !important;
+}
+.bg-color-white {
+    background-color: var(--color-white) !important;
+}
+
+.bg-color-primary-opacity {
+    background: var(--primary-opacity) !important;
+}
+
+.bg-color-secondary-opacity {
+    background: var(--secondary-opacity) !important;
+}
+
+.bg-color-coral-opacity {
+    background: var(--coral-opacity) !important;
+}
+
+.bg-color-violet-opacity {
+    background: var(--violet-opacity) !important;
+}
+
+.bg-color-pink-opacity {
+    background: var(--pink-opacity) !important;
+}
+.bg-color-white-opacity {
+    background-color: var(--white-opacity) !important;
+}
+
+.bg-color-black-opacity {
+    background-color: var(--black-opacity) !important;
+}
+
+.bg-color-heading-opacity {
+    background-color: var(--heading-opacity) !important;
+}
+
+
+.bg-color-danger-opacity {
+    background: var(--danger-opacity) !important;
+}
+
+.bg-color-warning-opacity {
+    background-color: var(--warning-opacity) !important;
+}
+
+.bg-color-success-opacity {
+    background-color: var(--success-opacity) !important;
+}
+
+
+
+.card-bg-1 {
+    background: var(--color-card-1) !important;
+}
+
+.card-bg-2 {
+    background: var(--color-card-2) !important;
+}
+
+.card-bg-3 {
+    background: var(--color-card-3) !important;
+}
+
+.card-bg-4 {
+    background: var(--color-card-4) !important;
+}
+.card-bg-5 {
+    background: var(--color-card-5) !important;
+}
+.card-bg-6 {
+    background: var(--color-card-6) !important;
+}
+.bg-color-success {
+    background-color: var(--color-success) !important;
+}
+.bg-color-danger {
+    background-color: var(--color-danger) !important;
+}
+.bg-color-warning {
+    background-color: var(--color-warning) !important;
+}
+.bg-color-info {
+    background-color: var(--color-info) !important;
+}
+
+
+/*-----------------------------
+    Rbt Background Gradient
+-------------------------------*/
+
+.rbt-gradient {
+    position: relative;
+    &::before {
+        content: '';
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        left: 0px;
+        right: 0px;
+        height: 100%;
+    }
+    &.bottom-theme-gradient {
+        bottom: 0;
+        height: 800;
+        &::before {
+            background: var(--gradient-3);
+        }
+    }
+}
+
+.bg-gradient-1 {
+    background: var(--gradient-1) !important;
+}
+
+.bg-gradient-2 {
+    background: var(--gradient-2) !important;
+}
+
+.bg-gradient-3 {
+    background: var(--gradient-3) !important;
+}
+
+.bg-gradient-4 {
+    background: var(--gradient-4) !important;
+}
+
+.bg-gradient-5 {
+    background: var(--gradient-5) !important;
+}
+
+.bg-gradient-6 {
+    background: var(--gradient-6) !important;
+}
+
+.bg-gradient-7 {
+    background: var(--gradient-7) !important;
+}
+
+.bg-gradient-8 {
+    background: var(--gradient-8) !important;
+}
+
+
+.bg-gradient-9 {
+    @extend %bg-gradient-9;
+}
+
+
+
+.bg-gradient-10 {
+    background: linear-gradient(141.76deg, #F5D9D5 0.59%, #F5EAB4 39.43%, #B76CEA 100%) !important;
+}
+
+.bg-gradient-11 {
+    background: linear-gradient(180deg, #EEDEFD 0%, #FFFFFF 100%) !important;
+}
+
+.bg-gradient-12 {
+    background: linear-gradient(208.29deg, #F5D9D5 0%, #F5EAB4 42.92%, #99D9F5 100%) !important;
+}
+
+.bg-gradient-13 {
+    background: linear-gradient(180deg, rgba(218, 251, 255, 0) 0%, #DAFBFF 100%) !important; 
+}
+
+.bg-gradient-14 {
+    background: var(--gradient-9) !important; 
+}
+
+.bg-gradient-15 {
+    background: linear-gradient(151.71deg, #29C986 0%, #2FC8E5 100%) !important; 
+}
+
+.bg-gradient-16 {
+    background: linear-gradient(151.71deg, #FF652D 0%, #FFA426 100%) !important; 
+}
+
+.bg-gradient-17 {
+    background: linear-gradient(151.71deg, #30C4FF 0%, #7259FF 100%) !important; 
+}
+
+
+.theme-mainbg-gradient {
+    background-color: var(--color-light);
+    position: relative;
+    // background-image: url(../images/bg/bg-g1.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+
+/*-------------------------------------
+    Background Opacity With Text Colors  
+---------------------------------------*/
+
+.bg-primary-opacity {
+    background: var(--primary-opacity) !important;
+    color: var(--color-primary) !important;
+}
+.bg-secondary-opacity {
+    background: var(--secondary-opacity) !important;
+    color: var(--color-secondary) !important;
+}
+.bg-coral-opacity {
+    background: var(--coral-opacity) !important;
+    color: var(--color-coral) !important;
+}
+.bg-violet-opacity {
+    background: var(--violet-opacity) !important;
+    color: var(--color-violet) !important;
+}
+.bg-pink-opacity {
+    background: var(--pink-opacity) !important;
+    color: var(--color-pink) !important;
+}
+.bg-white-opacity {
+    background: var(--white-opacity) !important;
+    color: var(--color-white) !important;
+}
+
+.bg-warning-opacity {
+    background: var(--warning-opacity) !important;
+    color: var(--color-warning) !important;
+}
+
+
+
+
+
+/*---------------------- 
+    Common Css 
+--------------------------*/
+.liststyle {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.height-auto {
+    height: auto !important;
+}
+
+.max-width-auto {
+    max-width: inherit !important;
+}
+
+
+
+
+
+
+
+
